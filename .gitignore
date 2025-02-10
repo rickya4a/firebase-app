@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+apps/backend-repo/node_modules/
+apps/frontend-repo/node_modules/
+
+# Firebase
+apps/backend-repo/lib/
+
+# Testing
+coverage
+
+# Build outputs
+.next/
+out/
+build
+dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Turbo
+.turbo
