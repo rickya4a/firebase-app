@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { userApi } from '../apis/userApi';
-import { UserUpdateData } from '../apis/user';
+import { UpdateUserDto } from '@ebuddy/shared';
 export const fetchUsers = createAsyncThunk(
   'users/fetchAll',
   async (_, { rejectWithValue }) => {
@@ -17,7 +17,7 @@ export const fetchUsers = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
   'users/update',
-  async (userData: UserUpdateData, { rejectWithValue }) => {
+  async (userData: UpdateUserDto, { rejectWithValue }) => {
     try {
       return await userApi.updateUser(userData);
     } catch (error: unknown) {

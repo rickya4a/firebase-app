@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { User, UserUpdateData } from './user';
+import { User, UpdateUserDto } from '@ebuddy/shared';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -56,7 +56,7 @@ export const userApi = {
     }
   },
 
-  updateUser: async (userData: UserUpdateData): Promise<User> => {
+  updateUser: async (userData: UpdateUserDto): Promise<User> => {
     try {
       const response = await api.put(`/update-user-data`, userData);
       return response.data;

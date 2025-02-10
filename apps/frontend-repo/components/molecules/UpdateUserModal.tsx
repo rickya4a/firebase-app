@@ -12,7 +12,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser } from '@/store/reducers';
 import type { AppDispatch, RootState } from '@/store/store';
-import type { User, UserUpdateData } from '@/apis/user';
+import type { User, UpdateUserDto } from '@ebuddy/shared';
 
 interface UpdateUserModalProps {
   user: User;
@@ -23,7 +23,7 @@ interface UpdateUserModalProps {
 export const UpdateUserModal = ({ user, open, onClose }: UpdateUserModalProps) => {
   const dispatch = useDispatch<AppDispatch>();
   const { updateStatus, error } = useSelector((state: RootState) => state.users);
-  const [formData, setFormData] = useState<UserUpdateData>({
+  const [formData, setFormData] = useState<UpdateUserDto>({
     name: user.name,
     email: user.email,
   });

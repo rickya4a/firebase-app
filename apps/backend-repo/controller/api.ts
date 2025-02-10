@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { userRepository } from '../repository/userCollection';
 import { mostPotentialUserRepository } from '../repository/mostPotentialUserCollection';
-import { UpdateUserDto } from '../entities/user';
+import { UpdateUserDto } from '@ebuddy/shared';
 import { AuthRequest } from '../types/request';
 import { db } from '../config/firebaseConfig';
 

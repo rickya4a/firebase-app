@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, CircularProgress } from '@mui/material';
-import type { User } from '@/apis/user';
+import type { User } from '@ebuddy/shared';
 import type { SxProps, Theme } from '@mui/material/styles';
 
 interface UpdateButtonProps {

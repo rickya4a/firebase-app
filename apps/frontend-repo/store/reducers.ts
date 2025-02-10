@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { userApi } from '../apis/userApi';
-import { User, UserUpdateData } from '../apis/user';
+import { User, UpdateUserDto } from '@ebuddy/shared';
 
 type ApiErrorResponse = {
   response?: {
@@ -64,7 +64,7 @@ export const fetchUsers = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
   'users/update',
-  async (userData: UserUpdateData, { rejectWithValue }) => {
+  async (userData: UpdateUserDto, { rejectWithValue }) => {
     try {
       const response = await userApi.updateUser(userData);
       return response;

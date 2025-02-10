@@ -1,5 +1,5 @@
 import { db } from '../config/firebaseConfig';
-import { User, UpdateUserDto } from '../entities/user';
+import { User, UpdateUserDto } from '@ebuddy/shared';
 import { generateToken } from '../utils/jwt';
 import bcrypt from 'bcrypt';
 

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ebuddy/shared": ["packages/shared/src"]
+    }
+  }
+}

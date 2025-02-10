@@ -10,6 +10,7 @@
     "dev:emulator": "cross-env NEXT_PUBLIC_USE_EMULATOR=true next dev"
   },
   "dependencies": {
+    "@ebuddy/shared": "^1.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.3",

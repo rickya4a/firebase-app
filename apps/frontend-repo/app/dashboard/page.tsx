@@ -7,7 +7,7 @@ import { UpdateUserModal, UpdateButton } from '@/components/molecules';
 import type { AppDispatch, RootState } from '@/store/store';
 import { fetchUsers, logout } from '@/store/reducers';
 import { useRouter } from 'next/navigation';
-import type { User } from '@/apis/user';
+import type { User } from '@ebuddy/shared';
 
 export default function Dashboard() {
   const dispatch = useDispatch<AppDispatch>();
@@ -36,7 +36,11 @@ export default function Dashboard() {
     <Box sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 3 }}>
         <Typography variant="h4">User Management</Typography>
-        <Button variant="outlined" onClick={handleLogout}>
+        <Button
+          variant="outlined"
+          onClick={handleLogout}
+          sx={{ height: 'fit-content' }}
+        >
           Logout
         </Button>
       </Box>
